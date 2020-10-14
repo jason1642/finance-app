@@ -6,7 +6,7 @@ const HomeSearchBar = () => {
   console.log(input)
   return (
     <div>
-      searchBar here
+      <input />
     </div>
   );
 }
