@@ -8,3 +8,8 @@ body {
   width: 100%;
   /* overflow-x: hidden; */
 }
+
+main {
+  padding: 2rem;
+  margin-top: -16px;
+}

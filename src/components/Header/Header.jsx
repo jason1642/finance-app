@@ -12,11 +12,10 @@ const Header = () => {
     height: 31px;
     padding: 20px 1.5rem 1rem 2rem;
     background-color: #32323e;
-    border: 1px solid white;
   `;
 
   const SiteLogo = styled.img`
-    height: 65%;
+    height: 64%;
     width: auto;
   `;
 
@@ -30,6 +29,7 @@ padding: 6px 0px;
 font-family: Helvetica, Arial, sans-serif;
 &:hover {
   border-bottom: 1px solid #52e3c2;
+  margin-top: 1px;
 }
 `;
 
