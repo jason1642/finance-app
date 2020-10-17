@@ -7,6 +7,7 @@ const MarketOverview = () => {
       padding : 2rem 3rem;
       border: 1px solid yellow;
       border-radius: 20px 20px 0px 0px;
+      background-color: #4d505f
   `;
 
   const Title = styled.h1`
