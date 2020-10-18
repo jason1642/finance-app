@@ -14,8 +14,8 @@ const MarketOverview = () => {
 
   const Title = styled.h1`
       font-size: 24px;
-      font-weight: 400px;
-      margin-bottom: 1rem;
+      font-weight: 250;
+      margin: 0 0 1rem 0;
       color: #8f94ab;
   `;
 

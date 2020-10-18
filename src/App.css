@@ -2,6 +2,10 @@ body {
   /* background-color: #32323e; */
 }
 
+html {
+  line-height: 1.15;
+}
+
 .App {
   background-color: #32323e;
   height: 100vh;

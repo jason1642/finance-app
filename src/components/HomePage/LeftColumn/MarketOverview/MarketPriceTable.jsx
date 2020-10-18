@@ -12,24 +12,30 @@ const MarketPriceTable = () => {
 
   const Container = styled.div`
     display: flex;
-    flex: 1 1 0px;
+    /* flex-grow: 1; */
     margin-right: -20px;
     flex-wrap: wrap;
+    justify-content: space-around;
     `;
   //tiles
   const MarketTile = styled.div`
     min-width: 90px;
-    width: 42%;
     display: flex;
     flex-direction: column;
+    flex: 1 1 0px;
     padding: 12px 16px;
     background-color : #40424f;
     border-radius: 3px;
+    margin-right: 20px;
+    float: right;
+    border-left: 3px solid yellow;
+    @media (max-width: 700px){
+
+    }
     `;
 
   const MarketTileRow = styled.div`
     display: flex;
-    width: 100%;
     justify-content: space-between;
     align-content: center;
   `;
@@ -43,11 +49,11 @@ const MarketPriceTable = () => {
 
   //tiles
   const PairContainer = styled.div`
-  width: 100%;
+  /* width: 100%; */
+  flex-grow: 1;
   display: flex;
   margin: 0 20px 10px 0;
   justify-content: space-between;
-  align-content: center;
   `;
 
 
@@ -77,20 +83,23 @@ const MarketPriceTable = () => {
 
 
   const pairContainerFunction = (sliceStart, sliceUpTo) => {
-    return marketOverviewData.slice(sliceStart, sliceUpTo).map(ele =>
+    return marketOverviewData.slice(sliceStart, sliceUpTo).map((ele, i) =>
 
-      <MarketTile>
+      <MarketTile style={{ marginRight: i === 1 ? '0' : '20px' }}>
 
 
         <MarketTileRow>
           <MarketTileIndexName>{ele.symbol}</MarketTileIndexName>
+          <div>
+            <i style={{ display: 'inline', fontSize: '14px' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i> <span style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '12px', alignContent: 'center' }}>-0.06%</span>
+          </div>
         </MarketTileRow>
 
-        <MarketTileRow>
+        <MarketTileRow style={{ fontSize: '12px', marginTop: '4px' }}>
 
-          <div style={{ color: "#b4b8cd" }}>Pre Market</div>
+          <div style={{ color: "#b4b8cd", fontWeight: 300, fontSize: '12px' }}>Pre Market</div>
 
-          <div style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '18px', height: '30px', width: '60px' }}>
+          <div style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '12px', alignContent: 'center' }}>
             <i style={{ display: 'inline' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}
           </div>
         </MarketTileRow>
