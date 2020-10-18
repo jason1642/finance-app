@@ -1,8 +1,18 @@
 {
   "stockExchangeName": "New York Stock Exchange",
   "stockMarketHours": {
-    "openingHour": "09:30 AM",
-    "closingHour": "04:00 PM"
+    "openingHour": {
+      "fullString": "09:30 AM",
+      "hourNumber": 9,
+      "minuteNumber": 30,
+      "amOrPm": "AM"
+    },
+    "closingHour": {
+      "fullString": "04:00 PM",
+      "hourNumber": 16,
+      "minuteNumber": 0,
+      "amOrPm": "PM"
+    }
   },
   "stockMarketHolidays": [
     {
@@ -31,7 +41,7 @@
     },
     {
       "year": 2021,
-      "New Years Day": "01-04",
+      "New Years Day": "01/04",
       "Martin Luther King, Jr. Day": "01/21",
       "Washington's Birthday": "02/18",
       "Good Friday": "04/05",

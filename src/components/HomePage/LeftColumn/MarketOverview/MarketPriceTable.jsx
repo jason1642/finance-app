@@ -8,32 +8,37 @@ import isMarketOpenFunction from '../../../../resources/isMarketOpenFunction.jsx
 
 const MarketPriceTable = () => {
 
-  isMarketOpenFunction()
+  console.log(isMarketOpenFunction.isItAHoliday())
 
   const Container = styled.div`
     display: flex;
-    flex-grow: 1;
+    flex: 1 1 0px;
     margin-right: -20px;
-    /* flex-wrap: wrap; */
-    background-color: white;
+    flex-wrap: wrap;
     `;
   //tiles
   const MarketTile = styled.div`
-  width: 35%;
+    min-width: 90px;
+    width: 42%;
     display: flex;
+    flex-direction: column;
     padding: 12px 16px;
-    background-color : grey;
-    border : 1px solid black;
+    background-color : #40424f;
+    border-radius: 3px;
     `;
 
   const MarketTileRow = styled.div`
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
   `;
 
   const MarketTileIndexName = styled.div`
     align-items: center;
     font-size: 14px;
     font-weight: bold;
+    color: white;
   `;
 
   //tiles
@@ -42,7 +47,7 @@ const MarketPriceTable = () => {
   display: flex;
   margin: 0 20px 10px 0;
   justify-content: space-between;
-
+  align-content: center;
   `;
 
 
@@ -83,7 +88,7 @@ const MarketPriceTable = () => {
 
         <MarketTileRow>
 
-          <div>Pre Market</div>
+          <div style={{ color: "#b4b8cd" }}>Pre Market</div>
 
           <div style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '18px', height: '30px', width: '60px' }}>
             <i style={{ display: 'inline' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}
@@ -126,3 +131,6 @@ const MarketPriceTable = () => {
 }
 
 export default MarketPriceTable;
+
+
+// after hours through weekend
