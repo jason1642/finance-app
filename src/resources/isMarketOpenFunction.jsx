@@ -55,7 +55,12 @@ const isMarketOpenFunction = {
 
 
   isItPremarket: () => {
-    if (Number.parseInt(splitHour[0]) >= 4 && Number.parseInt(splitHour[0]) <= 9 && Number.parseInt(splitHour[1]) < 30) {
+    if ((Number.parseInt(
+      splitHour[0]) >= 4
+      &&
+      Number.parseInt(splitHour[0]) <= 9)
+      ||
+      (Number.parseInt(splitHour[0]) === 9 && Number.parseInt(splitHour[1]) < 30)) {
       return true
     } else {
       return false

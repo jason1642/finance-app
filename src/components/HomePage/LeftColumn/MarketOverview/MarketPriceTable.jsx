@@ -8,7 +8,8 @@ import isMarketOpenFunction from '../../../../resources/isMarketOpenFunction.jsx
 
 const MarketPriceTable = () => {
 
-  console.log(isMarketOpenFunction.isItAHoliday())
+  console.log(isMarketOpenFunction.isItPremarket())
+  console.log(isMarketOpenFunction.isItAfterHours())
 
   const Container = styled.div`
     display: flex;
@@ -29,6 +30,10 @@ const MarketPriceTable = () => {
     margin-right: 20px;
     float: right;
     border-left: 3px solid yellow;
+    &:hover {
+      background-color: #4d505f;
+      cursor: pointer;
+    }
     @media (max-width: 700px){
 
     }
@@ -49,14 +54,14 @@ const MarketPriceTable = () => {
 
   //tiles
   const PairContainer = styled.div`
-  /* width: 100%; */
   flex-grow: 1;
   display: flex;
   margin: 0 20px 10px 0;
   justify-content: space-between;
   `;
 
-
+  const colors1 = ['#52e3c2', '#ff4495']
+  const colors2 = ['#d211fe', '#40c4ff']
 
   const [marketOverviewData, setMarketOverviewData] = useState([])
   const fourMarkets = ['SPY', 'QQQ', 'IWM', 'DIA']
@@ -82,22 +87,24 @@ const MarketPriceTable = () => {
   }, [])
 
 
-  const pairContainerFunction = (sliceStart, sliceUpTo) => {
+  const pairContainerFunction = (sliceStart, sliceUpTo, colorArr) => {
     return marketOverviewData.slice(sliceStart, sliceUpTo).map((ele, i) =>
 
-      <MarketTile style={{ marginRight: i === 1 ? '0' : '20px' }}>
+      <MarketTile style={{ marginRight: i === 1 ? '0' : '20px', borderLeft: `3px solid ${colorArr[i]}` }}>
 
 
         <MarketTileRow>
           <MarketTileIndexName>{ele.symbol}</MarketTileIndexName>
           <div>
-            <i style={{ display: 'inline', fontSize: '14px' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i> <span style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '12px', alignContent: 'center' }}>-0.06%</span>
+            <span style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '12px', alignContent: 'center' }}><i style={{ display: 'inline', fontSize: '14px' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}</span>
           </div>
         </MarketTileRow>
 
         <MarketTileRow style={{ fontSize: '12px', marginTop: '4px' }}>
 
-          <div style={{ color: "#b4b8cd", fontWeight: 300, fontSize: '12px' }}>Pre Market</div>
+          <div style={{ color: "#b4b8cd", fontWeight: 300, fontSize: '12px' }}>
+            {isMarketOpenFunction.isItPremarket() ? 'Pre Market' : isMarketOpenFunction.isItAfterHours() ? 'After Hours' : ''}
+          </div>
 
           <div style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '12px', alignContent: 'center' }}>
             <i style={{ display: 'inline' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}
@@ -124,12 +131,12 @@ const MarketPriceTable = () => {
 
       <PairContainer>
 
-        {marketOverviewData ? pairContainerFunction(0, 2) : <></>}
+        {marketOverviewData ? pairContainerFunction(0, 2, colors1) : <></>}
       </PairContainer>
 
 
       <PairContainer>
-        {marketOverviewData ? pairContainerFunction(2, 4) : <></>}
+        {marketOverviewData ? pairContainerFunction(2, 4, colors2) : <></>}
 
 
       </PairContainer>
