@@ -65,6 +65,13 @@ const MarketPriceTable = () => {
 
   const [marketOverviewData, setMarketOverviewData] = useState([])
   const fourMarkets = ['SPY', 'QQQ', 'IWM', 'DIA']
+  const fourMarketsNames = [
+    { symbol: 'SPY', name: 'S&P 500' },
+    { symbol: 'QQQ', name: 'Nasdaq' },
+    { symbol: 'IWM', name: 'Russell 2K' },
+    { symbol: 'DIA', name: 'Dow' }
+  ]
+
   let marketDataArray = []
   useEffect(() => {
 
@@ -94,7 +101,10 @@ const MarketPriceTable = () => {
 
 
         <MarketTileRow>
-          <MarketTileIndexName>{ele.symbol}</MarketTileIndexName>
+          <MarketTileIndexName>
+            {fourMarketsNames.filter(str => str.symbol === ele.symbol)[0].name
+            }
+          </MarketTileIndexName>
           <div>
             <span style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '12px', alignContent: 'center' }}><i style={{ display: 'inline', fontSize: '14px' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}</span>
           </div>
