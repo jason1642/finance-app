@@ -18,15 +18,18 @@ const HomeMyStocksInfo = props => {
    
   `;
   const Cell = styled.div`
-  display: inline-block;
+  display: flex;
+  align-items: center;
   padding: 1.09rem 0 1.09rem 0;
-  height: 51px;
+  height: 45px;
+  text-align: right;
   padding-left: 2rem;
     width: 110px;
     max-width: 110px;
     min-width: 110px;
-    font-size: 12px;
+    font-size: 14px;
     color: white;
+    
   /* height: 100%; */
   border-bottom: 1px solid grey;
 
@@ -39,13 +42,14 @@ const HomeMyStocksInfo = props => {
 
       {props.stockData.map(ele => <TestDiv>
 
-        <Cell>{ele.latestPrice}</Cell>
-        <Cell>{(ele.changePercent * 100).toFixed(2)}%</Cell>
-        <Cell>${ele.change}</Cell>
-        <Cell>{ele.primaryExchange}</Cell>
-        <Cell>{ele.openSource}</Cell>
-        <Cell>{ele.latestTime}</Cell>
-        <Cell>{ele.iexClose}</Cell>
+        <Cell>${ele.latestPrice}</Cell>
+        <Cell style={{ color: ele.change > 0 ? '#52e3c2' : '#ff4463' }}>{(ele.changePercent * 100).toFixed(2)}%</Cell>
+        <Cell style={{ color: ele.change > 0 ? '#52e3c2' : '#ff4463' }}>${ele.change}</Cell>
+        <Cell>{(ele.ytdChange * 100).toFixed(2)}%</Cell>
+        <Cell>${ele.previousClose}</Cell>
+        <Cell>${ele.week52High}</Cell>
+        <Cell>${ele.week52Low}</Cell>
+        <Cell>${ele.marketCap}</Cell>
       </TestDiv>)}
 
 

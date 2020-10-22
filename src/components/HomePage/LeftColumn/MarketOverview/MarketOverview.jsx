@@ -8,7 +8,7 @@ const MarketOverview = () => {
       border-radius: 20px;
       background-color: #4d505f;
       background-color: #393945;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
   `;
 
   const Title = styled.h1`

@@ -34,7 +34,7 @@ const HomeMyStocksMainHeader = () => {
 
 
 
-  const list = ['Price', 'Today % Change', 'Today $ Change', 'YTD Return', 'Market Cap', 'Entprs. Val(EV)', 'Margin', 'Growth', 'Value', 'Low'];
+  const list = ['Price', 'Today % Change', 'Today $ Change', 'YTD Return', 'Prev Close', '52 Week High', '52 Week Low', 'Market Cap'];
 
   const menu = list.map((ele, i) =>
     // <HeaderItem text={ele} key={i} selected={i} />

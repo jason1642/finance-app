@@ -33,7 +33,7 @@ const HomeMyStocksMain = () => {
     align-items: center;
     color: white;
     padding: .9rem 0 .9rem 0;
-    height: 51px;
+    height: 45px;
     border-bottom: 1px solid grey;
     /* background-color: grey; */
     /* border-radius: 20px; */
@@ -74,7 +74,7 @@ const HomeMyStocksMain = () => {
             Symbol</StaticItem>
           {usersStocksData.map(ele => <StaticItem>
             <i style={{
-              paddingRight: '1rem', color: ele.change > 0 ? 'green' : 'red'
+              paddingRight: '1rem', color: ele.change > 0 ? '#52e3c2' : '#ff4463'
             }} class="fas fa-circle"></i> {ele.symbol}</StaticItem>)}
 
         </StaticLeftColumn>

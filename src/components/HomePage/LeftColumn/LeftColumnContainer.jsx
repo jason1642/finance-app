@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import MarketOverview from './MarketOverview/MarketOverview.jsx'
 import HomeMyStocksContainer from './HomeMyStocks/HomeMyStocksContainer.jsx'
-import HomeMyStocksInfo from './HomeMyStocks/HomeMyStocksMain.jsx'
 
 
 

@@ -104,7 +104,7 @@ const MarketPriceTable = () => {
             }
           </MarketTileIndexName>
           <div>
-            <span style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '12px', alignContent: 'center' }}><i style={{ display: 'inline', fontSize: '14px' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}%</span>
+            <span style={{ color: ele.changePercent >= 0 ? '#52e3c2' : '#ff4463', fontSize: '12px', alignContent: 'center' }}><i style={{ display: 'inline', fontSize: '14px' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}%</span>
           </div>
         </MarketTileRow>
 
@@ -114,9 +114,9 @@ const MarketPriceTable = () => {
             {isMarketOpenFunction.isItPremarket() ? 'Pre Market' : isMarketOpenFunction.isItAfterHours() ? 'After Hours' : ''}
           </div>
 
-          <div style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '12px', alignContent: 'center' }}>
+          {/* <div style={{ color: ele.changePercent >= 0 ? '#52e3c2' : '#ff4463', fontSize: '12px', alignContent: 'center' }}>
             <i style={{ display: 'inline' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}%
-          </div>
+          </div> */}
         </MarketTileRow>
 
 
