@@ -19,7 +19,8 @@ const HomeMyStocksInfo = props => {
   `;
   const Cell = styled.div`
   display: inline-block;
-  padding: 1.15rem 0 1.15rem 0;
+  padding: 1.09rem 0 1.09rem 0;
+  height: 51px;
   padding-left: 2rem;
     width: 110px;
     max-width: 110px;

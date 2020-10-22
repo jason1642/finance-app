@@ -13,7 +13,7 @@ const LeftColumnContainer = () => {
         flex-direction: column;
         height: 500px;
         width: calc(67% - 1rem);
-        background-color: green;
+        /* background-color: green; */
     `;
   return (
     <Container>

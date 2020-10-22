@@ -1,5 +1,17 @@
 body {
   background-color: #32323e;
+
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-grey::-webkit-scrollbar {
+  /* background-color: #32323e; */
+  /* color: #1f1f24; */
+  /* width: 10px; */
+  display: none;
 }
 
 html {

@@ -32,12 +32,15 @@ const HomeMyStocksMain = () => {
     justify-content: flex-start;
     align-items: center;
     color: white;
+    padding: .9rem 0 .9rem 0;
+    height: 51px;
     border-bottom: 1px solid grey;
     /* background-color: grey; */
     /* border-radius: 20px; */
   `;
   const OverflowXDiv = styled.div`
     overflow-x: auto;
+    scrollbar-color: red yellow;
 `;
   const usersTestStocks = ['AAPL', 'MSFT', 'TSLA', 'FB']
   const [usersStocksData, setUsersStocksData] = useState([])
@@ -50,6 +53,7 @@ const HomeMyStocksMain = () => {
 
     usersTestStocks.map(async ele => {
       const fetchStockData = async () => {
+
         const response = await axios.get(`https://cloud.iexapis.com/stable/stock/${ele}/quote?token=${IEX_API_KEY}`)
         setUsersStocksData(oldArr => [...oldArr, response.data])
         // console.log(response.data)
@@ -66,13 +70,15 @@ const HomeMyStocksMain = () => {
     <Container>
       <Main>
         <StaticLeftColumn>
-          <StaticItem style={{ backgroundColor: 'none', borderBottom: '1px solid grey', justifyContent: 'center' }}>
+          <StaticItem style={{ backgroundColor: 'none', borderBottom: '1px solid grey', justifyContent: 'center', padding: '0', height: '52px' }}>
             Symbol</StaticItem>
           {usersStocksData.map(ele => <StaticItem>
-            <i style={{ color: 'green', paddingRight: '1rem' }} class="fas fa-circle"></i> {ele.symbol}</StaticItem>)}
+            <i style={{
+              paddingRight: '1rem', color: ele.change > 0 ? 'green' : 'red'
+            }} class="fas fa-circle"></i> {ele.symbol}</StaticItem>)}
 
         </StaticLeftColumn>
-        <OverflowXDiv>
+        <OverflowXDiv className='scrollbar-grey'>
           <HomeMyStocksMainHeader />
           <HomeMyStocksInfo stockData={usersStocksData} />
 

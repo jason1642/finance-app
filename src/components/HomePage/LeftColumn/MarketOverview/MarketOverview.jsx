@@ -5,10 +5,10 @@ import MarketPriceTable from './MarketPriceTable.jsx'
 const MarketOverview = () => {
   const Container = styled.div`
       padding : 2rem 3rem;
-      border-radius: 20px 20px 0px 0px;
+      border-radius: 20px;
       background-color: #4d505f;
       background-color: #393945;
-
+      margin-bottom: 10px;
   `;
 
   const Title = styled.h1`
