@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import HomeMyStockHeader from './HomeMyStockHeader.jsx'
+import HomeMyStockHeader from './HomeMyStocksHeader.jsx'
 import HomeMyStockMain from './HomeMyStocksMain.jsx'
 
 

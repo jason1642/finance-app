@@ -89,8 +89,6 @@ const MarketPriceTable = () => {
       setMarketOverviewData(marketDataArray)
       fetchStockData()
     })
-
-
   }, [])
 
 
@@ -106,7 +104,7 @@ const MarketPriceTable = () => {
             }
           </MarketTileIndexName>
           <div>
-            <span style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '12px', alignContent: 'center' }}><i style={{ display: 'inline', fontSize: '14px' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}</span>
+            <span style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '12px', alignContent: 'center' }}><i style={{ display: 'inline', fontSize: '14px' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}%</span>
           </div>
         </MarketTileRow>
 
@@ -117,7 +115,7 @@ const MarketPriceTable = () => {
           </div>
 
           <div style={{ color: ele.changePercent >= 0 ? 'green' : 'red', fontSize: '12px', alignContent: 'center' }}>
-            <i style={{ display: 'inline' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}
+            <i style={{ display: 'inline' }} class={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}%
           </div>
         </MarketTileRow>
 

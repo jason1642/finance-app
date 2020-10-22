@@ -1,5 +1,5 @@
 body {
-  /* background-color: #32323e; */
+  background-color: #32323e;
 }
 
 html {
@@ -8,9 +8,8 @@ html {
 
 .App {
   background-color: #32323e;
-  height: 100vh;
   width: 100%;
-  /* overflow-x: hidden; */
+  height: auto;
 }
 
 main {
