@@ -51,7 +51,8 @@ font-family: Helvetica, Arial, sans-serif;
           backgroundColor: '#52e3c2',
           padding: '.7rem 1rem',
           color: 'black',
-          borderRadius: '3px'
+          borderRadius: '3px',
+
         }}
         to=''>Upgrade</StyledLink>
       <StyledLink
