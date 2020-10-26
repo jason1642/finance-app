@@ -10,8 +10,6 @@ const HomePageContentContainer = () => {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1rem;
-    /* border: 1px white solid;
-    background-color: blue; */
     margin-top: 29px;
     height: auto;
   `;

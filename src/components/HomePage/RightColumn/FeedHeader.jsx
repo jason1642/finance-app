@@ -18,8 +18,8 @@ const FeedHeader = () => {
     margin-right: 2.5rem;
     font-size: 24px;
     font-weight: 400;
+    color: #8f94ab;
   `;
-
   const Nav = styled.div`
     display: flex;
     border-radius: 30px;
@@ -38,63 +38,64 @@ const FeedHeader = () => {
     text-align: center;
     word-spacing: normal;
     width: auto;
+    color: #8f94ab;
   `;
 
   const RowTwo = styled.div`
     display: flex;
     justify-content: flex-end;
     margin-top: 16px;
-
   `;
-
-
-
-
-
-
-
 
   const DropDownContainer = styled("div")`
-    width: 10.5em;
-    display: flex;
-    flex-direction: column;
+    width: 8em;
 `;
-
-
-
   const ListItem = styled.li`
   list-style: none;
+  width: 100%;
+  padding-bottom: 5px;
   margin-bottom: 0.8em;
-  
+  &:first-child {
+    
+    }
+    &:hover{
+      background-color: #6e7288;
+    }
   `;
 
-  const DropDownList = styled("ul")`
-padding: 0;
-margin: 0;
-padding-left: 1em;
-background: #ffffff;
-border: 2px solid #e5e5e5;
-box-sizing: border-box;
-color: #3faffa;
-font-size: 1.3rem;
-font-weight: 500;
-&:first-child {
-  padding-top: 0.8em;
-}
+  const DropDownList = styled.ul`
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background: #ffffff;
+    border: none;
+    border-radius: 0 0 15px 15px;
+    box-sizing: border-box;
+    color: white;
+    background-color: #4d505f;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+    &:first-child {
+      padding-top: 0.8em;
+    }
+
 `;
 
   const DropDownHeader = styled.div`
   margin-bottom: 0em;
-  border-radius: 15px;
   padding: 0.4em 2em 0.4em 1em;
-  /* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); */
+  text-align: center;
   font-weight: 500;
   font-size: 12px;
   color: white;
   background-color: #4d505f;
   `;
 
-  const DropDownListContainer = styled("div")``;
+  const DropDownListContainer = styled("div")`
+    height: inherit;
+    width: 100%;
+  `;
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -124,10 +125,10 @@ font-weight: 500;
       </RowOne>
       <RowTwo>
 
-        {/* <i style={{ color: 'white' }} class="fas fa-filter"></i> */}
-        <DropDownContainer>
-          <DropDownHeader onClick={toggling}>All Articles</DropDownHeader>
-
+        <DropDownContainer onMouseLeave={toggling} onMouseEnter={toggling}>
+          <DropDownHeader
+            style={{ borderRadius: isOpen ? '12px 12px 0 0' : '15px' }}
+          ><i style={{ color: 'white', fontSize: '10px', paddingRight: '4px' }} class="fas fa-filter"></i>All Articles</DropDownHeader>
           {isOpen && (
             <DropDownListContainer>
               <DropDownList>
@@ -139,7 +140,6 @@ font-weight: 500;
               </DropDownList>
             </DropDownListContainer>
           )}
-
         </DropDownContainer>
 
       </RowTwo>
