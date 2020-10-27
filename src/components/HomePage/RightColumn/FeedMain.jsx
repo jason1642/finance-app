@@ -43,14 +43,13 @@ const FeedMain = props => {
     overflow: hidden;
     color: white;
     font-size: 14px;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     height: 50px;
   `;
-
-  return (
-    <Container>
-      qweqw
-      {/* {props.businessNews.map((ele, i) =>
+  console.log(props.businessNews)
+  return (<>
+    {props.businessNews ? <Container>
+      {props.businessNews.map((ele, i) =>
         <ListItem key={i}>
           <ListContent>
             <MetaData>APPLE</MetaData>
@@ -63,8 +62,10 @@ const FeedMain = props => {
 
           </ListContent>
         </ListItem>
-      )} */}
+      )}
     </Container>
+      : <></>}
+  </>
   );
 }
 

@@ -18,13 +18,13 @@ const Feed = () => {
       console.log(response)
       setNewsApiData(response.data.articles)
     }
-    // fetchNewsData()
+    fetchNewsData()
   }, [])
   return (
     <Container>
       <FeedHeader />
       <FeedMain
-      // businessNews={newsApiData}
+        businessNews={newsApiData}
       />
     </Container>
   )
