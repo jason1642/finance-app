@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import siteLogo from '../../images/atomFinanceLogo.png'
 import { Link } from 'react-router-dom'

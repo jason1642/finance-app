@@ -75,7 +75,7 @@ const MarketPriceTable = () => {
   let marketDataArray = []
   useEffect(() => {
 
-    const FMP_API_KEY = '0dafce6ce2fa49c8f0acd0ac316dfa33';
+    // const FMP_API_KEY = '0dafce6ce2fa49c8f0acd0ac316dfa33';
     const IEX_API_KEY = 'pk_3256652724eb490abdfd234401050f50';
 
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import HomePageContentContainer from './HomePageContentContainer';
 import HomeSearchBar from './HomeSearchBar'
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import MarketOverview from './MarketOverview/MarketOverview.jsx'
 import HomeMyStocksContainer from './HomeMyStocks/HomeMyStocksContainer.jsx'

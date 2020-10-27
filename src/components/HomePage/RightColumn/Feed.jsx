@@ -8,9 +8,7 @@ const Feed = () => {
 
   const Container = styled.div`
   `;
-  const Main = styled.div`
-  
-  `;
+
   const [newsApiData, setNewsApiData] = useState([])
 
   useEffect(() => {
