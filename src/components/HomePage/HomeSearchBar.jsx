@@ -57,7 +57,7 @@ const HomeSearchBar = () => {
       <SearchIcon src={SearchIconSVG} alt='' />
       <SearchBarInput
         type='text'
-        placeholder='Search Here...'
+        placeholder='Search...'
       // value={} 
 
       />

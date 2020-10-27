@@ -19,8 +19,6 @@ const FeedMain = props => {
   const ListContent = styled.div`
     box-sizing:border-box;
     overflow: auto;
-    text-overflow: ellipsis;
-    /* -webkit-line-clamp: 2; */
 `;
   const MetaData = styled.div`
     display: inline-block;
@@ -31,27 +29,29 @@ const FeedMain = props => {
     margin-bottom: 10px;
   `;
   const Title = styled.div`
-    display: -webkit-box;
+    /* display: -webkit-box; */
     color: white;
     font-size: 14px;
     font-weight: 500;
     overflow: hidden;
     text-overflow: auto;
-    text-overflow: ellipsis;
+    height: 30px;
+    /* text-overflow: ellipsis; */
     /* -webkit-line-clamp: 2; */
     color: orange;
   `;
 
-  // const Description = styled.div`
-  //   display: -webkit-box;
-  //   -webkit-box-orient: vertical;  
-  //   overflow: hidden;
-  //   color: white;
-  //   font-size: 14px;
-  //   margin-top: .5rem;
-  //   text-overflow: ellipsis;
-  //   -webkit-line-clamp: 2;
-  // `;
+  const Description = styled.div`
+    /* display: -webkit-box; */
+    /* -webkit-box-orient: vertical;   */
+    overflow: hidden;
+    color: white;
+    font-size: 14px;
+    margin-top: .5rem;
+    height: 50px;
+    /* text-overflow: ellipsis; */
+    /* -webkit-line-clamp: 2; */
+  `;
 
   return (
     <Container>
@@ -63,14 +63,13 @@ const FeedMain = props => {
             <Title>
               {ele.title}
             </Title>
-            {/* <Description>
+            <Description>
               {ele.description}
-            </Description> */}
+            </Description>
 
           </ListContent>
         </ListItem>
       )}
-      {console.log(props)}
     </Container>
   );
 }
