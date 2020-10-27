@@ -48,13 +48,13 @@ const FeedMain = props => {
   `;
   console.log(props.businessNews)
   return (<>
-    {props.businessNews ? <Container>
+    <Container>
       {props.businessNews.map((ele, i) =>
         <ListItem key={i}>
           <ListContent>
-            <MetaData>APPLE</MetaData>
+            <MetaData>{ele.provider[0].name}</MetaData>
             <Title>
-              {ele.title}
+              {ele.name}
             </Title>
             <Description>
               {ele.description}
@@ -64,7 +64,7 @@ const FeedMain = props => {
         </ListItem>
       )}
     </Container>
-      : <></>}
+
   </>
   );
 }
