@@ -13,8 +13,9 @@ const Feed = () => {
 
   useEffect(() => {
     const NEWSAPI_KEY = 'cce7827002dc4aacac0aa05b70ad0f33'
+    const NEWSAPI_KEY_TWO = '1fae1394978c433199f7c1279bd1cae4'
     const fetchNewsData = async () => {
-      const response = await axios.get(`https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=${NEWSAPI_KEY}`)
+      const response = await axios.get(`https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=${NEWSAPI_KEY_TWO}`)
       console.log(response)
       setNewsApiData(response.data.articles)
     }
