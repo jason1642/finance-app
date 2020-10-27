@@ -8,24 +8,19 @@ const FeedMain = props => {
     flex: 1 1 0%;
     background-color: #393945;
     width: inherit;
-    
   `;
-
-
   const ListItem = styled.div`
     background-color: #393945;
     padding: 1rem 3rem;
     margin-bottom: 2px;
     width: 340px;
     border-bottom: 2px solid #32323e;
-
   `;
   const ListContent = styled.div`
     box-sizing:border-box;
     overflow: auto;
     text-overflow: ellipsis;
     /* -webkit-line-clamp: 2; */
-
 `;
   const MetaData = styled.div`
     display: inline-block;
@@ -35,7 +30,6 @@ const FeedMain = props => {
     color: white;
     margin-bottom: 10px;
   `;
-
   const Title = styled.div`
     display: -webkit-box;
     color: white;

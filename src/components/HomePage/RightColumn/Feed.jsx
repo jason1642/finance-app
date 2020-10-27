@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import FeedHeader from './FeedHeader'
-import FeedMain from './FeedMain'
+import FeedHeader from './FeedHeader.jsx'
+import FeedMain from './FeedMain.jsx'
 import axios from 'axios'
 
 const Feed = () => {
