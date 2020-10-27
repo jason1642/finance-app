@@ -48,17 +48,16 @@ const FeedMain = props => {
     color: orange;
   `;
 
-  const Description = styled.div`
-    display: -webkit-box;
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
-    color: white;
-    font-size: 14px;
-    margin-top: .5rem;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-
-  `;
+  // const Description = styled.div`
+  //   display: -webkit-box;
+  //   -webkit-box-orient: vertical;  
+  //   overflow: hidden;
+  //   color: white;
+  //   font-size: 14px;
+  //   margin-top: .5rem;
+  //   text-overflow: ellipsis;
+  //   -webkit-line-clamp: 2;
+  // `;
 
   return (
     <Container>
@@ -70,9 +69,9 @@ const FeedMain = props => {
             <Title>
               {ele.title}
             </Title>
-            <Description>
+            {/* <Description>
               {ele.description}
-            </Description>
+            </Description> */}
 
           </ListContent>
         </ListItem>
