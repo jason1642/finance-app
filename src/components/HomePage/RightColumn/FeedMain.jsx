@@ -24,7 +24,7 @@ const FeedMain = props => {
     box-sizing:border-box;
     overflow: auto;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
+    /* -webkit-line-clamp: 2; */
 
 `;
   const MetaData = styled.div`
@@ -44,7 +44,7 @@ const FeedMain = props => {
     overflow: hidden;
     text-overflow: auto;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
+    /* -webkit-line-clamp: 2; */
     color: orange;
   `;
 
