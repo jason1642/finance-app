@@ -72,10 +72,10 @@ const HomeMyStocksMain = () => {
         <StaticLeftColumn>
           <StaticItem style={{ backgroundColor: 'none', borderBottom: '1px solid grey', justifyContent: 'center', padding: '0', height: '52px' }}>
             Symbol</StaticItem>
-          {usersStocksData.map(ele => <StaticItem>
+          {usersStocksData.map((ele, i) => <StaticItem key={i}>
             <i style={{
               paddingRight: '1rem', color: ele.change > 0 ? '#52e3c2' : '#ff4463'
-            }} class="fas fa-circle"></i> {ele.symbol}</StaticItem>)}
+            }} className="fas fa-circle"></i> {ele.symbol}</StaticItem>)}
 
         </StaticLeftColumn>
         <OverflowXDiv className='scrollbar-grey'>

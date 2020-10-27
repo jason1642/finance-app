@@ -85,7 +85,7 @@ const HomeMyStocksHeader = () => {
 
       <RowTwo>
 
-        <DropDownButton style={{ color: 'white' }}> <i style={{ height: '12px', marginRight: '6px', marginTop: '1px' }} class="fas fa-filter"></i>
+        <DropDownButton style={{ color: 'white' }}> <i style={{ height: '12px', marginRight: '6px', marginTop: '1px' }} className="fas fa-filter"></i>
 
 All
 

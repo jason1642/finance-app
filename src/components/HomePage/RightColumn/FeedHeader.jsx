@@ -128,7 +128,7 @@ const FeedHeader = () => {
         <DropDownContainer onMouseLeave={toggling} onMouseEnter={toggling}>
           <DropDownHeader
             style={{ borderRadius: isOpen ? '12px 12px 0 0' : '15px' }}
-          ><i style={{ color: 'white', fontSize: '10px', paddingRight: '4px' }} class="fas fa-filter"></i>All Articles</DropDownHeader>
+          ><i style={{ color: 'white', fontSize: '10px', paddingRight: '4px' }} className="fas fa-filter"></i>All Articles</DropDownHeader>
           {isOpen && (
             <DropDownListContainer>
               <DropDownList>

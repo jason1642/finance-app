@@ -38,7 +38,7 @@ const HomeMyStocksMainHeader = () => {
 
   const menu = list.map((ele, i) =>
     // <HeaderItem text={ele} key={i} selected={i} />
-    <HeaderItem>{ele}</HeaderItem>
+    <HeaderItem key={i}>{ele}</HeaderItem>
   )
 
 

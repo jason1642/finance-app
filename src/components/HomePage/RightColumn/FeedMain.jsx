@@ -64,7 +64,7 @@ const FeedMain = props => {
     <Container>
 
       {props.businessNews.map((ele, i) =>
-        <ListItem>
+        <ListItem key={i}>
           <ListContent>
             <MetaData>AAPL</MetaData>
             <Title>

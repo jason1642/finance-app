@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5d02a441.chunk.css",
+    "main.js": "/static/js/main.56f98e8e.chunk.js",
+    "main.js.map": "/static/js/main.56f98e8e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
+    "static/js/2.c2ef4368.chunk.js": "/static/js/2.c2ef4368.chunk.js",
+    "static/js/2.c2ef4368.chunk.js.map": "/static/js/2.c2ef4368.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c518423b1ff4f50eaeced191e8593da8.js": "/precache-manifest.c518423b1ff4f50eaeced191e8593da8.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5d02a441.chunk.css.map": "/static/css/main.5d02a441.chunk.css.map",
+    "static/js/2.c2ef4368.chunk.js.LICENSE.txt": "/static/js/2.c2ef4368.chunk.js.LICENSE.txt",
+    "static/media/atomFinanceLogo.png": "/static/media/atomFinanceLogo.7ee9b7ee.png",
+    "static/media/infoicon01.svg": "/static/media/infoicon01.025a6ed8.svg",
+    "static/media/searchIcon.svg": "/static/media/searchIcon.c0c93e97.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09b85ec0.js",
+    "static/js/2.c2ef4368.chunk.js",
+    "static/css/main.5d02a441.chunk.css",
+    "static/js/main.56f98e8e.chunk.js"
+  ]
+}

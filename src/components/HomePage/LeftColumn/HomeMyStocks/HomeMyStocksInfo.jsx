@@ -40,7 +40,7 @@ const HomeMyStocksInfo = props => {
     <Container>
 
 
-      {props.stockData.map(ele => <TestDiv>
+      {props.stockData.map((ele, i) => <TestDiv key={i}>
 
         <Cell>${ele.latestPrice}</Cell>
         <Cell style={{ color: ele.change > 0 ? '#52e3c2' : '#ff4463' }}>{(ele.changePercent * 100).toFixed(2)}%</Cell>
