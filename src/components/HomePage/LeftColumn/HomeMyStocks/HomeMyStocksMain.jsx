@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import HomeMyStocksMainHeader from './HomeMyStocksMainHeader'
 import HomeMyStocksInfo from './HomeMyStocksInfo'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -38,6 +39,18 @@ const HomeMyStocksMain = () => {
     /* background-color: grey; */
     /* border-radius: 20px; */
   `;
+
+  const Symbol = styled.p`
+    display: inline-block;
+    background-color: grey;
+    border-radius: 5px;
+    padding: 4px 6px;
+    &:hover{
+      background-color: white;
+      color: grey;
+      cursor: pointer;
+    }
+  `;
   const OverflowXDiv = styled.div`
     overflow-x: auto;
     scrollbar-color: red yellow;
@@ -70,14 +83,34 @@ const HomeMyStocksMain = () => {
     <Container>
       <Main>
         <StaticLeftColumn>
-          <StaticItem style={{ backgroundColor: 'none', borderBottom: '1px solid grey', justifyContent: 'center', padding: '0', height: '52px' }}>
+          <StaticItem style={{
+            backgroundColor: 'none',
+            borderBottom: '1px solid grey',
+            justifyContent: 'center',
+            padding: '0',
+            height: '52px'
+          }}>
             Symbol</StaticItem>
           {usersStocksData.map((ele, i) => <StaticItem key={i}>
             <i style={{
               paddingRight: '1rem', color: ele.change > 0 ? '#52e3c2' : '#ff4463'
-            }} className="fas fa-circle"></i> {ele.symbol}</StaticItem>)}
+            }} className="fas fa-circle"></i>
+
+
+            <Link to={{
+              pathname: `/quote/${ele.symbol}`,
+              stockData: {
+                name: ele.symbol
+              }
+            }} style={{ color: 'white' }}>
+
+              <Symbol>{ele.symbol}</Symbol>
+            </Link>
+          </StaticItem>)}
 
         </StaticLeftColumn>
+
+
         <OverflowXDiv className='scrollbar-grey'>
           <HomeMyStocksMainHeader />
           <HomeMyStocksInfo stockData={usersStocksData} />

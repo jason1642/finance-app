@@ -4,7 +4,7 @@ import Header from './components/Header/Header.jsx'
 import HomePage from './components/HomePage/HomePage.jsx'
 import { Route } from "react-router-dom"
 import Footer from './components/Footer/Footer.jsx'
-
+import StockDetail from './components/StockDetailPage/Container/StockDetail.jsx'
 
 const App = () => {
 
@@ -34,6 +34,8 @@ const App = () => {
       <main>
 
         <Route exact path='/' render={routerProps => <HomePage  {...routerProps} />} />
+
+        <Route exact path='/quote/:symbol' render={routerProps => <StockDetail  {...routerProps} />} />
 
       </main>
 
