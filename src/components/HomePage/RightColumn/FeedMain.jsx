@@ -17,16 +17,15 @@ const FeedMain = props => {
     width: 340px;
     border-bottom: 2px solid #32323e;
   `;
-  const ListContent = styled.div`
-    box-sizing:border-box;
-    overflow: auto;
-`;
+
   const MetaData = styled.div`
     display: inline-block;
-    padding: 2px 5px;
-    border-radius: 15px;
-    background-color: grey;
+    padding: 3px 5px;
+    border-radius: 3px;
+    background-color: #4d505f;
     color: white;
+    font-weight: bold;
+    font-size: 10px;
     margin-bottom: 10px;
   `;
   const Title = styled.div`
@@ -36,12 +35,22 @@ const FeedMain = props => {
     overflow: hidden;
     text-overflow: auto;
     height: 30px;
-    color: orange;
+    color: white;
+   
   `;
-
+  const ListContent = styled.div`
+    box-sizing:border-box;
+    overflow: auto;
+    &:hover{
+      cursor: pointer;
+      ${Title} {
+      color: #52e3c2;
+    }
+    }
+`;
   const Description = styled.div`
     overflow: hidden;
-    color: white;
+    color: #b4b8cd;
     font-size: 14px;
     margin-top: 0.5rem;
     height: 50px;

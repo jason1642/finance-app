@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import siteLogo from '../../images/atomFinanceLogo.png'
+import siteLogo from '../../images/siteLogo.png'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
@@ -15,7 +15,7 @@ const Header = () => {
   `;
 
   const SiteLogo = styled.img`
-    height: 64%;
+    height: 100px;
     width: auto;
   `;
 
@@ -36,6 +36,7 @@ font-family: Helvetica, Arial, sans-serif;
 
   return (
     <Header>
+      {/* change logo please */}
       <SiteLogo src={siteLogo} alt='Site logo' />
       <StyledLink to=''>HOME</StyledLink>
       <StyledLink to=''>PORTFOLIO</StyledLink>

@@ -39,6 +39,10 @@ const FeedHeader = () => {
     word-spacing: normal;
     width: auto;
     color: #8f94ab;
+    &:hover{
+      color: white;
+      cursor: pointer;
+    }
   `;
 
   const RowTwo = styled.div`
