@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const QuoteOverview = props => {
   const Container = styled.div`
     padding : 2rem 2.5rem 0px;
-    margin-bottom: 1rem;
+    margin-bottom: .3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +24,15 @@ const QuoteOverview = props => {
   `;
 
   const RowTwo = styled.div`
-  
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  `;
+  const RowTwoSpan = styled.span`
+    margin-left: 5px;
+    font-size: 14px;
+    padding-left: 5px;
+    text-align: right;
   `;
   const greenOrRed = () => (props.stockData.changePercent * 100).toFixed(2) > 0 ? '#52e3c2' : '#ff4495'
   const caretUpOrDown = () => (props.stockData.changePercent * 100).toFixed(2) > 0 ? <i style={{
@@ -52,7 +60,7 @@ const QuoteOverview = props => {
                 <span style={{ color: greenOrRed() }}>{props.stockData.change}</span>
               </div>
 
-              <div style={{ textAlign: 'right', fontSize: '16px', color: 'white' }}>
+              <div style={{ textAlign: 'right', fontSize: '16px', color: 'white', alignSelf: 'flex-end' }}>
                 1Y Return:<i style={{
                   margin: '0 5px',
                   color: ytdGreenOrRed()
@@ -65,6 +73,16 @@ const QuoteOverview = props => {
 
 
             <RowTwo>
+              <div>
+                <div style={{ paddingBottom: '6px' }}>(108.56 -0.28% -0.30 after hours)</div>
+                <div style={{ fontStyle: 'italic', marginRight: '2rem' }}>Real Time (last trade Fri, 7:56pm EDT)</div>
+              </div>
+              <div style={{ display: 'flex' }}>
+                <RowTwoSpan style={{ paddingLeft: '0.5em' }}>Bid: 107.70</RowTwoSpan>
+                <RowTwoSpan style={{}}>Ask: 121.70</RowTwoSpan>
+                <RowTwoSpan style={{}}>Volume: 190.19m</RowTwoSpan>
+              </div>
+
 
             </RowTwo>
           </Content>

@@ -23,6 +23,7 @@ const Container = (props) => {
     const fetchStockData = async () => {
       const response = await axios.get(`https://cloud.iexapis.com/stable/stock/${props.match.params.symbol}/quote?token=${IEX_API_KEY}`)
       setStockData(response.data)
+      console.log(props.match.params.symbol)
     }
     console.log(stockData)
 

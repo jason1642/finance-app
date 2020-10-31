@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 import QuoteOverview from './QuoteOverview';
+import CompanyProfileContainer from './QuoteCompanyProfile/CompanyProfileContainer.jsx'
 
 const LeftColumn = props => {
 
@@ -10,7 +11,7 @@ const LeftColumn = props => {
     width: calc(67% - 1rem);
     margin-right: 2rem;
     flex-wrap: wrap;
-    background-color: blue;
+    background-color: #32323e;
   `;
 
   console.log(props)
@@ -19,8 +20,8 @@ const LeftColumn = props => {
       props.stockData ?
         <Container>
           {props.stockData ? <QuoteOverview stockData={props.stockData} symbolParam={props.symbol} /> : <></>}
-      11111111
-    </Container> : <></>
+          <CompanyProfileContainer symbol={props.symbol} />
+        </Container> : <></>
     }</>
   );
 }
