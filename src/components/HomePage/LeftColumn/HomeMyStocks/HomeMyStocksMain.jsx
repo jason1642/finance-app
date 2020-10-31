@@ -100,7 +100,8 @@ const HomeMyStocksMain = () => {
             <Link to={{
               pathname: `/quote/${ele.symbol}`,
               stockData: {
-                name: ele.symbol
+                ...ele
+
               }
             }} style={{ color: 'white' }}>
 

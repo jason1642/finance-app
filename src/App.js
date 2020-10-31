@@ -4,7 +4,9 @@ import Header from './components/Header/Header.jsx'
 import HomePage from './components/HomePage/HomePage.jsx'
 import { Route } from "react-router-dom"
 import Footer from './components/Footer/Footer.jsx'
-import StockDetail from './components/StockDetailPage/Container/StockDetail.jsx'
+import StockDetailPage from './components/StockDetailPage/Container/StockDetailPage.jsx'
+import HomeSearchBar from './components/HomePage/HomeSearchBar.jsx'
+
 
 const App = () => {
 
@@ -32,10 +34,10 @@ const App = () => {
     <div className="App">
       <Header />
       <main>
-
+        <HomeSearchBar />
         <Route exact path='/' render={routerProps => <HomePage  {...routerProps} />} />
 
-        <Route exact path='/quote/:symbol' render={routerProps => <StockDetail  {...routerProps} />} />
+        <Route exact path='/quote/:symbol' render={routerProps => <StockDetailPage  {...routerProps} />} />
 
       </main>
 

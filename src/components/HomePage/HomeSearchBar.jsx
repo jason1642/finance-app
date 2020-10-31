@@ -13,6 +13,8 @@ const HomeSearchBar = () => {
     border-radius: 20px;
     padding-left: 3rem;
     background-color: #393945;
+    margin-bottom: 1.5rem;
+    margin-top: 14px;
     &:hover{
       background-color:#40424f;
     }

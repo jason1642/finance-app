@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 import QuoteOverview from './QuoteOverview';
 
-const LeftColumn = () => {
-
+const LeftColumn = props => {
 
   const Container = styled.div`
     display: flex;
@@ -13,10 +12,16 @@ const LeftColumn = () => {
     flex-wrap: wrap;
     background-color: blue;
   `;
+
+  console.log(props)
   return (
-    <Container>
-      <QuoteOverview />
-    </Container>
+    <>{
+      props.stockData ?
+        <Container>
+          {props.stockData ? <QuoteOverview stockData={props.stockData} symbolParam={props.symbol} /> : <></>}
+      11111111
+    </Container> : <></>
+    }</>
   );
 }
 
