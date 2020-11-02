@@ -8,6 +8,7 @@ const FeedMain = props => {
     flex: 1 1 0%;
     background-color: #393945;
     height: 100vh;
+    border-radius: 0 0 20px 20px;
     overflow: auto;
     width: inherit;
   `;
