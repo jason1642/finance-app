@@ -7,7 +7,8 @@ const FeedMain = props => {
     flex-direction: column;
     flex: 1 1 0%;
     background-color: #393945;
-    height: 100%;
+    height: 100vh;
+    overflow: auto;
     width: inherit;
   `;
   const ListItem = styled.div`
@@ -57,7 +58,7 @@ const FeedMain = props => {
   `;
   console.log(props.businessNews)
   return (<>
-    <Container>
+    <Container className='no-scroll-feed'>
       {props.businessNews.map((ele, i) =>
         <ListItem key={i}>
           <ListContent>

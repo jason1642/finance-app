@@ -35,7 +35,7 @@ const Container = (props) => {
   return (
     <Container>
       <LeftColumn stockData={stockData} symbol={props.match.params.symbol} />
-      <RightColumn />
+      <RightColumn symbol={props.match.params.symbol} />
     </Container>
   );
 }

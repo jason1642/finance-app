@@ -1,18 +1,17 @@
 import React from 'react';
 import styled from 'styled-components'
-
-const RightColumn = () => {
+import Feed from './Feed'
+const RightColumn = props => {
 
   const Container = styled.div`
     display: flex;
     flex-direction: column;
     width: calc(33% + 1rem);
-    background-color: grey;
     border-radius: 15px;
   `;
   return (
     <Container>
-      right side
+      <Feed symbol={props.symbol} />
     </Container>
   );
 }
