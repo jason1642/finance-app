@@ -20,7 +20,7 @@ const LeftColumn = props => {
       props.stockData ?
         <Container>
           {props.stockData ? <QuoteOverview stockData={props.stockData} symbolParam={props.symbol} /> : <></>}
-          <CompanyProfileContainer symbol={props.symbol} />
+          <CompanyProfileContainer stockData={props.stockData} symbol={props.symbol} />
         </Container> : <></>
     }</>
   );

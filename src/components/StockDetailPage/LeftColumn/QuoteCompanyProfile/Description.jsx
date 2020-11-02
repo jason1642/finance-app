@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
 
-const Description = () => {
+const Description = props => {
 
   const Container = styled.div`
     margin-top: 2rem;
@@ -14,21 +14,28 @@ const Description = () => {
     justify-content: space-between;
     
   `;
-  const Button = styled.button`
-    display: flex;
-    padding: 10px;
-    font-size: 100%;
-    height: 15px;
+  const Button = styled.div`
+  padding: 0 3px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    height: 20px;
+    color: #6e7288;
+    background-color: #32323e;
     text-align: center;
-    align-items: flex-start;
-    width: 15px;
+    width: 20px;
     font-weight: 900;
     &:hover{
       cursor: pointer;
     }
   `;
   const Content = styled.div`
-  
+    font-size: 14px;
+    padding-bottom: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
   `;
   return (
     <Container>
@@ -36,7 +43,9 @@ const Description = () => {
         <div style={{ fontSize: '24px', marginBottom: '1.5rem' }}>Description</div>
         <Button>+</Button>
       </Header>
-      <Content></Content>
+      <Content>
+        {props.companyProfile.description ? props.companyProfile.description : ''}
+      </Content>
     </Container>
   );
 }

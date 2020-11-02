@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 import Description from './Description';
+import SectorIndustryOverview from './SectorIndustryOverview'
 import axios from 'axios'
 
 const QuoteCompanyProfile = props => {
   const Container = styled.div`
     display: flex;
+    flex-direction: column;
     padding: 2rem 3rem;
     border-radius: 0 0 20px 20px;
     background-color: #393945;
@@ -31,8 +33,8 @@ const QuoteCompanyProfile = props => {
 
   return (
     <Container>
-      <Description companyProfile={companyProfile} />
-      {/* <SectorIndustryOverview  companyProfile={companyProfile} /> */}
+      { companyProfile ? <Description companyProfile={companyProfile} /> : <></>}
+      { companyProfile ? <SectorIndustryOverview stockData={props.stockData} companyProfile={companyProfile} /> : <></>}
     </Container>
   );
 }
