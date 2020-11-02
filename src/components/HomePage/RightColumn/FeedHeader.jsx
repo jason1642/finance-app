@@ -53,6 +53,8 @@ const FeedHeader = () => {
 
   const DropDownContainer = styled("div")`
     width: 8em;
+    position: absolute;
+  
 `;
   const ListItem = styled.li`
   list-style: none;

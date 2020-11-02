@@ -7,8 +7,8 @@ const RightColumn = () => {
     display: flex;
     flex-direction: column;
     width: calc(33% + 1rem);
-    background-color: red;
-
+    background-color: grey;
+    border-radius: 15px;
   `;
   return (
     <Container>

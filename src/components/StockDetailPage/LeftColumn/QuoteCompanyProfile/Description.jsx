@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 const Description = props => {
 
+  const [displayBlock, setDisplayBlock] = useState('-webkit-box')
+
   const Container = styled.div`
     margin-top: 2rem;
     display: flex;
@@ -33,7 +35,7 @@ const Description = props => {
     padding-bottom: 1px;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
+    display: ${displayBlock};
     -webkit-line-clamp: 4; /* number of lines to show */
     -webkit-box-orient: vertical;
   `;
@@ -41,7 +43,7 @@ const Description = props => {
     <Container>
       <Header>
         <div style={{ fontSize: '24px', marginBottom: '1.5rem' }}>Description</div>
-        <Button>+</Button>
+        <Button onClick={() => displayBlock === '-webkit-box' ? setDisplayBlock('block') : setDisplayBlock('-webkit-box')}>+</Button>
       </Header>
       <Content>
         {props.companyProfile.description ? props.companyProfile.description : ''}

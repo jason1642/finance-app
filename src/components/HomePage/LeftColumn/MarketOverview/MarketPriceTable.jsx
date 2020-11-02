@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import axios from 'axios'
 import isMarketOpenFunction from '../../../../resources/isMarketOpenFunction.jsx'
@@ -95,28 +96,29 @@ const MarketPriceTable = () => {
     return marketOverviewData.slice(sliceStart, sliceUpTo).map((ele, i) =>
 
       <MarketTile key={i} style={{ marginRight: i === 1 ? '0' : '20px', borderLeft: `3px solid ${colorArr[i]}` }}>
+        <Link style={{ textDecoration: 'none' }} to='/quote/SPY'>
 
 
-        <MarketTileRow>
-          <MarketTileIndexName>
-            {fourMarketsNames.filter(str => str.symbol === ele.symbol)[0].name
-            }
-          </MarketTileIndexName>
-          <div>
-            <span style={{ color: ele.changePercent >= 0 ? '#52e3c2' : '#ff4463', fontSize: '12px', alignContent: 'center' }}><i style={{ display: 'inline', fontSize: '14px' }} className={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}%</span>
-          </div>
-        </MarketTileRow>
+          <MarketTileRow>
+            <MarketTileIndexName>
+              {fourMarketsNames.filter(str => str.symbol === ele.symbol)[0].name
+              }
+            </MarketTileIndexName>
+            <div>
+              <span style={{ color: ele.changePercent >= 0 ? '#52e3c2' : '#ff4463', fontSize: '12px', alignContent: 'center' }}><i style={{ display: 'inline', fontSize: '14px' }} className={ele.changePercent >= 0 ? "fas fa-caret-up" : "fas fa-caret-down"}></i>{(ele.changePercent * 100).toFixed(2).toString()}%</span>
+            </div>
+          </MarketTileRow>
 
-        <MarketTileRow style={{ fontSize: '12px', marginTop: '4px' }}>
+          <MarketTileRow style={{ fontSize: '12px', marginTop: '4px' }}>
 
-          <div style={{ color: "#b4b8cd", fontWeight: 300, fontSize: '12px' }}>
-            {isMarketOpenFunction.isItPremarket() ? 'Pre Market' : isMarketOpenFunction.isItAfterHours() ? 'After Hours' : ''}
-          </div>
-        </MarketTileRow>
+            <div style={{ color: "#b4b8cd", fontWeight: 300, fontSize: '12px' }}>
+              {isMarketOpenFunction.isItPremarket() ? 'Pre Market' : isMarketOpenFunction.isItAfterHours() ? 'After Hours' : ''}
+            </div>
+          </MarketTileRow>
 
 
+        </Link>
       </MarketTile>
-
 
 
     )
