@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const QuoteOverview = props => {
   const Container = styled.div`
     padding : 2rem 2.5rem 0px;
+    padding-bottom: 15px;
     margin-bottom: .3rem;
     display: flex;
     flex-direction: column;

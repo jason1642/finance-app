@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const SectorIndustryOverview = props => {
 
   const Container = styled.div`
-    border: 1px solid white;
+    /* border: 1px solid white; */
   `;
 
   const SecIndContainer = styled.div`
@@ -53,7 +53,7 @@ const SectorIndustryOverview = props => {
 
   const OverviewTileRight = styled.div`
     display: flex;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: calc(50% - 1rem);
     padding-left: 1rem;
     flex-direction : column;
@@ -66,31 +66,29 @@ const SectorIndustryOverview = props => {
     { name: 'Average Volume:', apiKey: 'avgTotalVolume' },
     { name: 'Previous Volume:', apiKey: 'previousVolume' },
     { name: 'Primary Exchange:', apiKey: 'primaryExchange' },
-    { name: 'Previous Close Price:', apiKey: 'previousClose' },
-    { name: ':', apiKey: '' },
+    { name: 'Previous Close Price:', apiKey: 'previousClose' }
   ]
 
   const overviewRightTileArray = [
     { name: 'CEO:', apiKey: 'CEO' },
     { name: 'Employees:', apiKey: 'employees' },
     { name: 'Website:', apiKey: 'website' },
-    { name: '', apiKey: '' },
-    { name: '', apiKey: '' },
-    { name: '', apiKey: '' },
-    { name: '', apiKey: '' },
-    { name: '', apiKey: '' }
+    { name: 'Phone:', apiKey: 'phone' },
+    { name: 'Country:', apiKey: 'country' },
+    { name: 'State:', apiKey: 'state' },
+    { name: 'City:', apiKey: 'city' }
   ]
   return (
     <Container>
       <SecIndContainer>
         <Sector>
           <Title>Sector:</Title>
-          <div>Tech Technology</div>
+          <div>{props.companyProfile.sector}</div>
         </Sector>
         <Industry>
           <Title>Industry:</Title>
-          Software Software Services
-          </Industry>
+          {props.companyProfile.industry}
+        </Industry>
       </SecIndContainer>
 
 
