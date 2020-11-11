@@ -8,6 +8,10 @@ const RightColumn = props => {
     flex-direction: column;
     width: calc(33% + 1rem);
     border-radius: 15px;
+    @media (max-width: 768px) {
+    /* flex-direction: column; */
+    width: 100%;
+  }
   `;
   return (
     <Container>

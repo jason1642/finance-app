@@ -12,6 +12,9 @@ const Container = (props) => {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    @media (max-width: 768px) {
+    flex-direction: column;
+  }
   `;
   const [stockData, setStockData] = useState()
   useEffect(() => {

@@ -12,6 +12,11 @@ const LeftColumn = props => {
     margin-right: 2rem;
     flex-wrap: wrap;
     background-color: #32323e;
+    @media (max-width: 768px) {
+    /* flex-direction: column; */
+    width: 100%;
+    margin-bottom: 1rem;
+  }
   `;
 
   console.log(props)

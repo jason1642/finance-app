@@ -7,7 +7,7 @@ import axios from 'axios'
 const Feed = props => {
 
   const Container = styled.div`
-
+    
   `;
 
   const [newsApiData, setNewsApiData] = useState([])

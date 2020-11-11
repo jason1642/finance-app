@@ -11,6 +11,9 @@ const FeedMain = props => {
     border-radius: 0 0 20px 20px;
     overflow: auto;
     width: inherit;
+    @media (max-width: 768px) {
+      height: 60vh;
+  }
   `;
   const ListItem = styled.div`
     background-color: #393945;
@@ -18,6 +21,12 @@ const FeedMain = props => {
     margin-bottom: 2px;
     width: 340px;
     border-bottom: 2px solid #32323e;
+    @media (max-width: 768px) {
+      width: 90%;
+      padding: 1rem 2rem;
+      margin: 0 auto;
+      
+  }
   `;
 
   const MetaData = styled.div`
@@ -49,6 +58,7 @@ const FeedMain = props => {
       color: #52e3c2;
     }
     }
+    
 `;
   const Description = styled.div`
     overflow: hidden;
@@ -62,7 +72,7 @@ const FeedMain = props => {
     <Container className='no-scroll-feed'>
       {props.businessNews.map((ele, i) =>
         <ListItem key={i}>
-          <ListContent>
+          <ListContent onClick={() => window.open(ele.url, "_blank")}>
             <MetaData>{ele.provider[0].name}</MetaData>
             <Title>
               {ele.name}
