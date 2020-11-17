@@ -10,11 +10,15 @@
     "axios": "^0.20.0",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
-    "react-dom": "^16.13.1",
+    "react-burger-menu": "^2.9.0",
+    "react-dom": "^16.14.0",
     "react-intl": "^5.8.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.4",
     "react-scroll": "^1.8.1",
+    "react-share": "^4.3.1",
+    "react-toggle": "^4.1.1",
+    "react-tooltip": "^4.2.10",
     "styled-components": "^5.2.0"
   },
   "scripts": {

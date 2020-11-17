@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import siteLogo from '../../images/atomFinanceLogo.png'
+import siteLogo from '../../images/siteLogo.png'
 import { Link } from 'react-router-dom'
+import LinkBatch from './LinkBatch.jsx'
+import { push as Menu } from 'react-burger-menu'
+
 
 const Header = () => {
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const Header = styled.header`
     display: flex;
     justify-content: space-between;
@@ -15,7 +19,7 @@ const Header = () => {
   `;
 
   const SiteLogo = styled.img`
-    height: 64%;
+    height: 100px;
     width: auto;
   `;
 
@@ -32,32 +36,19 @@ font-family: Helvetica, Arial, sans-serif;
   margin-top: 1px;
 }
 `;
+  console.log(windowWidth)
 
 
   return (
     <Header>
-      <SiteLogo src={siteLogo} alt='Site logo' />
-      <StyledLink to=''>HOME</StyledLink>
-      <StyledLink to=''>PORTFOLIO</StyledLink>
+      <Link to='/'><SiteLogo src={siteLogo} alt='Site logo' /></Link>
+      {/* {windowWidth <= 768 ? 'X' : <LinkBatch />} */}
+      {/* <Menu> */}
       <StyledLink to=''>HUBS</StyledLink>
       <StyledLink to=''>CHAT</StyledLink>
       <StyledLink to=''>COMPARE</StyledLink>
-      <StyledLink to=''>SCREENER</StyledLink>
-      <div style={{ flexGrow: .7, display: 'flex' }}></div>
-      <StyledLink to=''>HELP</StyledLink>
-      <StyledLink to=''>FEEDBACK</StyledLink>
-      <StyledLink
-        style={{
-          backgroundColor: '#52e3c2',
-          padding: '.7rem 1rem',
-          color: 'black',
-          borderRadius: '3px',
-
-        }}
-        to=''>Upgrade</StyledLink>
-      <StyledLink
-        style={{}}
-        to=''>JC</StyledLink>
+      <LinkBatch />
+      {/* </Menu> */}
     </Header>
   );
 }

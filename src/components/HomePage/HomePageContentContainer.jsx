@@ -12,6 +12,9 @@ const HomePageContentContainer = () => {
     margin-bottom: 1rem;
     margin-top: 29px;
     height: auto;
+    @media (max-width: 768px) {
+      flex-direction: column;
+  }
   `;
   return (
     <Container>

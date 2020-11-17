@@ -13,6 +13,9 @@ const FeedHeader = () => {
   const RowOne = styled.div`
     display: flex;
     justify-content: space-between;
+    @media (max-width: 768px) {
+    /* flex-direction: column; */
+  }
   `;
   const Title = styled.div`
     margin-right: 2.5rem;
@@ -25,6 +28,11 @@ const FeedHeader = () => {
     border-radius: 30px;
     background-color: #32323e;
     width: auto;
+
+    @media (max-width: 768px) {
+      width: 50%;
+      justify-content: space-between;
+  }
   `;
   const Button = styled.div`
     display: inline;
@@ -39,6 +47,12 @@ const FeedHeader = () => {
     word-spacing: normal;
     width: auto;
     color: #8f94ab;
+    &:hover{
+      color: white;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+  }
   `;
 
   const RowTwo = styled.div`
@@ -49,6 +63,8 @@ const FeedHeader = () => {
 
   const DropDownContainer = styled("div")`
     width: 8em;
+    position: absolute;
+  
 `;
   const ListItem = styled.li`
   list-style: none;
