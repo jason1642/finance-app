@@ -9,7 +9,6 @@ const RightColumn = props => {
     width: calc(33% + 1rem);
     border-radius: 15px;
     @media (max-width: 768px) {
-    /* flex-direction: column; */
     width: 100%;
   }
   `;
