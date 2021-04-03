@@ -184,9 +184,9 @@ Project Link: [https://github.com/jason1642/finance-app](https://github.com/jaso
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-
-* []()
-* []()
+* [Styled Components](https://styled-components.com/)
+* [React Hooks](https://reactjs.org/)
+* [React Router](https://reactrouter.com/)
 * [IEX cloud](https://iexcloud.io/)
 * [Font Awesome](https://fontawesome.com)
 
