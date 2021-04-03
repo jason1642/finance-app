@@ -97,8 +97,8 @@ Here's a blank template to get started:
 * [Ruby on Rails]()
 * [React]()
 * [Postgresql]()
-
-
+* [Netlify]()
+* [Heroku]()
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -114,6 +114,8 @@ This is an example of how to list things you need to use the software and how to
   ```
 
 ### Installation
+0. Get a free API key at https://iexcloud.io/
+
 
 1. Clone the Repo
    ```sh
