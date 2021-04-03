@@ -36,7 +36,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">project_title</h3>
+  <h3 style="font-weight: 300; font-size: 35px;" align="center">Karethel</h3>
 
   <p align="center">
     project_description
@@ -94,8 +94,8 @@ Here's a blank template to get started:
 
 ### Built With
 
-* []()
-* []()
+* [Ruby on Rails]()
+* [React]()
 * []()
 
 
