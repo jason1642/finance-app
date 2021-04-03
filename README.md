@@ -20,20 +20,20 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+<!--
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
+-->
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/jason1642/finance-app">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="readmeimages/karethel-logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 style="font-weight: 300; font-size: 35px;" align="center">Karethel</h3>
@@ -96,7 +96,7 @@ Here's a blank template to get started:
 
 * [Ruby on Rails]()
 * [React]()
-* []()
+* [Postgresql]()
 
 
 
@@ -115,7 +115,7 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Clone the repo
+1. Clone the Repo
    ```sh
    git clone https://github.com/jason1642/finance-app.git
    ```
@@ -123,11 +123,18 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    bundle install
    ```
-2. 
+3. Migrations
    ```sh
-   
+   rails rake db:migration
    ```
-
+4. Start Server
+   ```sh
+   rails s
+   ```
+5. On another tab, start the front end
+   ```sh
+   cd client && npm i && npm start
+   ```
 
 
 <!-- USAGE EXAMPLES -->
@@ -169,7 +176,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+Email : jason1642@gmail.com
 
 Project Link: [https://github.com/jason1642/finance-app](https://github.com/jason1642/finance-app)
 
@@ -180,8 +187,8 @@ Project Link: [https://github.com/jason1642/finance-app](https://github.com/jaso
 
 * []()
 * []()
-* []()
-
+* [IEX cloud](https://iexcloud.io/)
+* [Font Awesome](https://fontawesome.com)
 
 
 
