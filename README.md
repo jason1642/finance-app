@@ -39,7 +39,7 @@
   <h3 style="font-weight: 300; font-size: 35px;" align="center">Karethel</h3>
 
   <p align="center">
-    project_description
+    A fullstack application displaying company information and news. Features user accounts, stock search, and more.
     <br />
     <a href="https://github.com/jason1642/finance-app"><strong>Explore the docs »</strong></a>
     <br />
