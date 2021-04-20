@@ -41,10 +41,10 @@
   <p align="center">
     A fullstack application displaying company information and news. Features user accounts, stock search, and more.
     <br />
-    <a href="https://github.com/jason1642/finance-app"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jason1642/finance-app" ><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jason1642/finance-app">View Demo</a>
+    <a href="https://karethel-finance.netlify.app">View Demo</a>
     ·
     <a href="https://github.com/jason1642/finance-app/issues">Report Bug</a>
     ·
@@ -140,12 +140,10 @@ This is an example of how to list things you need to use the software and how to
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
-
+<!-- ## Usage
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
 _For more examples, please refer to the [Documentation](https://example.com)_
-
+-->
 
 
 <!-- ROADMAP -->
@@ -169,11 +167,9 @@ Contributions are what make the open source community such an amazing place to b
 
 
 <!-- LICENSE -->
-## License
-
+<!-- ## License
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
+-->
 
 <!-- CONTACT -->
 ## Contact
@@ -181,7 +177,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Email : jason1642@gmail.com
 
 Project Link: [https://github.com/jason1642/finance-app](https://github.com/jason1642/finance-app)
-
 
 
 <!-- ACKNOWLEDGEMENTS -->
